@@ -1,0 +1,21 @@
+<import src="/pages/listTemplate/listTemplate.wxml"/>
+<view class='listContainer'>
+  <swiper indicator-dots indicator-color='green' indicator-active-color='pink' autoplay interval='2000' circular>
+   <swiper-item>
+    <image src='/images/detail/carousel/01.jpg'></image>
+   </swiper-item>
+    <swiper-item>
+    <image src='/images/detail/carousel/02.jpg'></image>
+   </swiper-item>
+    <swiper-item>
+    <image src='/images/detail/carousel/03.jpg'></image>
+   </swiper-item>
+    <swiper-item>
+    <image src='/images/detail/carousel/04.jpg'></image>
+   </swiper-item>
+  </swiper>
+
+  <view wx:for="{{listArr}}" wx:key="index" data-index='{{index}}'  bindtap='toDetail'>
+  <template is="listTmp" data='{{...item}}'/>
+</view>
+</view>

@@ -1,0 +1,8 @@
+<view class='indexContainer'>
+  <image wx:if='{{userInfo.avatarUrl}}' class='indexImg' src='{{userInfo.avatarUrl}}'></image>
+  <button wx:else open-type='getUserInfo' bindgetuserinfo='handleGetUserInfo' class='btn'>获取用户信息</button>
+  <text class='indexName'>hello {{userInfo.nickName}} </text>
+  <view class='goStudy'>
+    <text catchtap='toList'>开启小程序之旅</text>
+  </view>
+</view>
